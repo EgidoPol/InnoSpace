@@ -4,7 +4,7 @@
   "description": "Whity",
   "main": "index.js",
   "scripts": {
-    "start": "tsc --build && node dist/index.js",
+    "start": "dist/index.js",
     "dev": "tsc-watch --onSuccess \"node dist/index.js\"",
     "clean": "tsc --build --clean",
     "build": "tsc --build  --clean"
