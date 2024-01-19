@@ -1,0 +1,38 @@
+import config from "../config/config";
+import User, {IUser} from "../models/user";
+
+const jwt = require('jsonwebtoken');
+
+interface IUserJson
+{
+    id: string,
+    email: string
+}
+
+//Token created with 1 week expiration = 604800, 1 Year expiration =  
+function createToken(user:IUser) {
+    const payload:IUserJson={ id: user._id.toString(), email: user.email };
+    return jwt.sign(payload, config.jwtSecret, {
+        expiresIn: '365d'
+    });
+}
+function CheckJWT(token:string): Promise<[boolean,string]>{
+    return new Promise((resolve,reject )=>{
+ 
+            const element = jwt.verify(token, config.jwtSecret);
+           User.findOne({ "_id": element.id }).select('_id').lean().then((usr)=>{
+                if(usr==null){
+                    reject(new Error("No User with this token-->Invalid token!"));   
+                }
+                //usr.password = "password-hidden";
+                else
+                    resolve( [true, usr['_id'].toString()]);
+            });
+        
+    });
+}
+
+export default {
+    CheckJWT,
+    createToken
+}

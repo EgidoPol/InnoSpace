@@ -1,0 +1,18 @@
+{
+    "_id": {
+        "$oid": "5fce5f2f08af58c2b393fb80"
+    },
+    "colorR": 0,
+    "colorB": 255,
+    "colorG": 0,
+    "intensity": 255
+}
+{
+    "_id": {
+        "$oid": "5fce5f1408af58c2b393fb7f"
+    },
+    "colorR": 255,
+    "colorB": 0,
+    "colorG": 0,
+    "intensity": 255
+}

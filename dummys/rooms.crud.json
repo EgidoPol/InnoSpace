@@ -1,0 +1,11 @@
+{
+    "_id": {
+        "$oid": "5fce630608af58c2b393fb83"
+    },
+    "name": "comedor",
+    "lights": [{
+        "$oid": "5fce5f1408af58c2b393fb7f"
+    }, {
+        "$oid": "5fce632008af58c2b393fb80"
+    }]
+}
