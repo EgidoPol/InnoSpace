@@ -9,7 +9,7 @@
     "clean": "tsc --build --clean",
     "build": "tsc --build  --clean"
   },
-  "author": "EA Grupo 2",
+  "author": "Innova Experts",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
@@ -28,7 +28,7 @@
     "passport-jwt": "^4.0.0",
     "randomstring": "^1.1.5",
     "serve-favicon": "^2.5.0",
-    "socket.io": "^2.3.0",
+    "socket.io": "^4.7.4",
     "socketio-auth": "^0.1.1",
     "socketio-jwt": "^4.6.2",
     "ts-node": "^3.3.0",
